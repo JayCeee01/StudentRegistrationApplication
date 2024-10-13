@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDisplayMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDisplayMessage.Designer.cs">
+      <DependentUpon>frmDisplayMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudentRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     <Compile Include="..\..\..\source\repos\StudentRegistrationForm\Student Data.cs">
       <Link>Student Data.cs</Link>
     </Compile>
+    <EmbeddedResource Include="frmDisplayMessage.resx">
+      <DependentUpon>frmDisplayMessage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStudentRegistration.resx">
       <DependentUpon>frmStudentRegistration.cs</DependentUpon>
     </EmbeddedResource>
@@ -68,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -81,6 +91,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient-abstract-background-with-different-shapes_23-2149110297.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient-abstract-background-with-different-shapes_23-21491102971.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solar night.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient-abstract-background-with-different-shapes_23-21491102972.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
