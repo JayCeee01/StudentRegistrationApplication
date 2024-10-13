@@ -29,18 +29,6 @@ namespace StudentRegistrationApplication
             this.Close();
         }
 
-        public void displayMessage(string fname, string lname, string mname, string gender, string date_day, string date_month, string date_year, string course, string urlArchivo)
-        {
-            textBox1.Text = "Student Name: " + fname + " " + mname + " " + lname + Environment.NewLine + "Gender: " + gender +
-            Environment.NewLine + "Date of Birth: " + date_day + "/" + date_month + "/" + date_year + Environment.NewLine + "Program: " + course;
-            labelTitle.Text = "Account Successfullly Registered!";
-
-            if (urlArchivo != "")
-            {
-                // display image in picture box 
-                insertImage.Image = new Bitmap(urlArchivo);
-            }
-        }
         public void displayMessage(string fname, string lname, string mname, string gender, string date_day, string date_month, string date_year, string course)
         {
             textBox1.Text = "Student Name: " + fname + " " + mname + " " + lname + Environment.NewLine + "Gender: " + gender +
@@ -67,16 +55,20 @@ namespace StudentRegistrationApplication
             labelTitle.Text = "An error has occured!";
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmDisplayMessage_Load(object sender, EventArgs e)
         {
             
         }
-    }
 
+        private void labelTitle_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 
 }

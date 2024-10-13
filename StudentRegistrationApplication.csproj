@@ -60,9 +60,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="..\..\..\source\repos\StudentRegistrationForm\Student Data.cs">
-      <Link>Student Data.cs</Link>
-    </Compile>
     <EmbeddedResource Include="frmDisplayMessage.resx">
       <DependentUpon>frmDisplayMessage.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\insert image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

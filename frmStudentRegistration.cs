@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
-using StudentRegistrationData;
 using System.Xml.Linq;
 using System.Security.Policy;
 using System.IO;
@@ -112,7 +111,6 @@ namespace StudentRegistrationApplication
                 string date_year = comboBox2.Text;
                 string course = comboBox4.Text;
                 string gender = "";
-                string urlArchivo = "";
 
                 if (radioButton2.Checked == true)
                 {
@@ -129,7 +127,7 @@ namespace StudentRegistrationApplication
 
                         
 
-                        display.displayMessage(fname, lname, mname, gender, date_day, date_month, date_year, course, urlArchivo);
+                        display.displayMessage(fname, lname, mname, gender, date_day, date_month, date_year, course);
                         display.Show();
                     } else
                     {
@@ -222,18 +220,16 @@ namespace StudentRegistrationApplication
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                frmDisplayMessage display = new frmDisplayMessage();
                 pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
-                string urlArchivo = openFileDialog1.FileName;
-                //display.displayMessage(urlArchivo);
-
 
             }
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
-    }
+
+}
 }
