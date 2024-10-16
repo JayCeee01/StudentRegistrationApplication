@@ -15,7 +15,7 @@ namespace StudentRegistrationApplication
         
         public frmDisplayMessage()
         {
-            
+            //Capuz Jerome Jerico
             InitializeComponent();
         }
 
