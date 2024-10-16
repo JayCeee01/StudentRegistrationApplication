@@ -31,6 +31,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -38,7 +40,7 @@
             this.button1.BackColor = System.Drawing.Color.LimeGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(132, 241);
+            this.button1.Location = new System.Drawing.Point(216, 250);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -68,10 +70,22 @@
             this.textBox1.Location = new System.Drawing.Point(12, 55);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 164);
+            this.textBox1.Size = new System.Drawing.Size(252, 172);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Displays a message";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox1.BackgroundImage = global::StudentRegistrationApplication.Properties.Resources.insert_image;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(283, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(175, 172);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // frmDisplayMessage
             // 
@@ -79,7 +93,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.BackgroundImage = global::StudentRegistrationApplication.Properties.Resources.output;
-            this.ClientSize = new System.Drawing.Size(342, 285);
+            this.ClientSize = new System.Drawing.Size(480, 285);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -87,6 +102,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDisplayMessage";
             this.Load += new System.EventHandler(this.frmDisplayMessage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,5 +112,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

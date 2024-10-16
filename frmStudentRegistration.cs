@@ -100,6 +100,8 @@ namespace StudentRegistrationApplication
         private void button1_Click(object sender, EventArgs e)
         {
             frmDisplayMessage display = new frmDisplayMessage();
+            Image id = pictureBox1.Image;
+            
 
             try
             {
@@ -122,24 +124,25 @@ namespace StudentRegistrationApplication
                 }
 
                 if (textBox2.Text != "" && textBox1.Text != "" && textBox3.Text != "" && comboBox1.SelectedIndex > -1 && comboBox2.SelectedIndex > -1 && comboBox3.SelectedIndex > -1 && comboBox4.SelectedIndex > -1){
+                    
                     if ((radioButton1.Checked == true && radioButton2.Checked == false) || (radioButton1.Checked == false && radioButton2.Checked == true))
                     {
 
-                        
 
-                        display.displayMessage(fname, lname, mname, gender, date_day, date_month, date_year, course);
+
+                        display.displayMessage(fname, lname, mname, gender, date_day, date_month, date_year, course, id);
                         display.Show();
                     } else
                     {
-                       display.displayMessage();
+                        display.displayMessage();
                     }
                 } else if (textBox2.Text != "" && textBox1.Text != "" && textBox3.Text != "" && comboBox4.SelectedIndex > -1)
                 {
-                    display.displayMessage(fname, lname, mname, course);
+                    display.displayMessage(fname, lname, mname, course, id);
                     display.Show();
                 } else if (textBox2.Text != "" && textBox1.Text != "" && comboBox4.SelectedIndex > -1)
                 {
-                    display.displayMessage(fname, lname, course);
+                    display.displayMessage(fname, lname, course, id);
                     display.Show();
                     
                 }
@@ -201,7 +204,19 @@ namespace StudentRegistrationApplication
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog()
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpe, *.jpeg, *.jfif, *.png,) | *.jpg; *.jpe; *.jpeg; *.jfif; *.png";
+            openFileDialog1.ShowDialog();
+
+            try
+            {
+                pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has occured. Please enter the correct file.");
+            }
+            /*
             {
                 InitialDirectory = @"D:\",
                 Title = "Browse Text Files",
@@ -220,10 +235,10 @@ namespace StudentRegistrationApplication
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                frmDisplayMessage display = new frmDisplayMessage();
-                pictureBox1.Image = new Bitmap(openFileDialog1.FileName);
-
-            }
+                //frmDisplayMessage display = new frmDisplayMessage();
+                Image idImage = new Bitmap(openFileDialog1.FileName);
+                pictureBox1.Image = 
+            } */
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

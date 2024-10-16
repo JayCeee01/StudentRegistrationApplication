@@ -15,7 +15,7 @@ namespace StudentRegistrationApplication
         
         public frmDisplayMessage()
         {
-            
+            //Jerome Jerico L. Capuz BSCS301 ComProg
             InitializeComponent();
         }
 
@@ -29,23 +29,26 @@ namespace StudentRegistrationApplication
             this.Close();
         }
 
-        public void displayMessage(string fname, string lname, string mname, string gender, string date_day, string date_month, string date_year, string course)
+        public void displayMessage(string fname, string lname, string mname, string gender, string date_day, string date_month, string date_year, string course, Image id)
         {
             textBox1.Text = "Student Name: " + fname + " " + mname + " " + lname + Environment.NewLine + "Gender: " + gender +
             Environment.NewLine + "Date of Birth: " + date_day + "/" + date_month + "/" + date_year + Environment.NewLine + "Program: " + course;
             labelTitle.Text = "Account Successfullly Registered!";
+            pictureBox1.Image = id;
         }
 
-        public void displayMessage(string fname, string lname, string mname, string course)
+        public void displayMessage(string fname, string lname, string mname, string course, Image id)
         {
             textBox1.Text = "Student Name: " + fname + " " + mname + " " + lname + Environment.NewLine + "Program: " + course;
             labelTitle.Text = "Account Successfullly Registered!";
+            pictureBox1.Image = id;
         }
 
-        public void displayMessage(string fname, string lname, string course)
+        public void displayMessage(string fname, string lname, string course, Image id)
         {
             textBox1.Text = "Student Name: " + fname + " " + lname + Environment.NewLine + "Program: " + course;
             labelTitle.Text = "Account Successfullly Registered!";
+            pictureBox1.Image = id;
         }
 
         public void displayMessage()
