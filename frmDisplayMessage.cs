@@ -15,7 +15,7 @@ namespace StudentRegistrationApplication
         
         public frmDisplayMessage()
         {
-            //Jerome Jerico L. Capuz BSCS301 ComProg
+            //Jerome Jerico L. Capuz BSCS301 ComProg Activity
             InitializeComponent();
         }
 
